@@ -3,11 +3,7 @@ from behave import given, when, then
 from time import sleep
 
 
-@when('click on cart')
-def click_cart(context):
-    # click on cart
-    context.driver.find_element(By.CSS_SELECTOR, "use[href*='/icons/Cart']").click()
-    sleep(6)
+
 
 @then('verify cart is empty')
 def verify_cart_results(context):
