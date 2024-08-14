@@ -12,7 +12,8 @@ Feature: Target cart
     And Store product name
     And Confirm Add to Cart button from the side navigation
     And Open cart page
-    Then Verify cart has item(s)
+    #Then Verify cart has 1 item(s)
+    Then  Verify cart has correct product
 
 
 
