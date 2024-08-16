@@ -4,6 +4,7 @@ Scenario Outline: User can search for a product on target
     Given Open target main page
     When Search for <product>
     Then Verify search results show for <product>
+    Then Verify correct search results URL opens for {product}
   Examples:
   |product |product   |
   |coffee  |coffee    |

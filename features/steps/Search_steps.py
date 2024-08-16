@@ -9,5 +9,9 @@ from time import sleep
 
 @then('Verify search results show for {product}')
 def verify_search_results(context, product):
-    actual_text = context.driver.find_element(By.XPATH, "//div[@data-test='resultsHeading']").text
-    assert product in actual_text, f'Expected {product} not in actual {actual_text}'
+    context.app.search_results_page.verify_text()
+
+
+@then ('Verify correct search results URL opens for {product}')
+def verify_url(context, product):
+    context.app.search_results_page.verify_url()
